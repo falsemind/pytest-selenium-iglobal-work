@@ -20,12 +20,12 @@ FOUND_USER = lambda username: (By.XPATH, f"//div[@class='oxd-table-body']//div[c
 USER_TABLE_CELL = (By.XPATH, "//div[@role='row']//div[@role='cell'][2]//div")
 
 ROLE_DROPDOWN = (By.XPATH, "//label[text()='User Role']/following::div[contains(@class, 'oxd-select-text')][1]")
-ADMIN_ROLE = (By.XPATH, "//div[@class='oxd-select-option' and @role='option']//span[text()='Admin']")
-ESS_ROLE = (By.XPATH, "//div[@class='oxd-select-option' and @role='option']//span[text()='ESS']")
+ADMIN_ROLE = (By.XPATH, "//div[@class='oxd-select-option']//span[text()='Admin']")
+ESS_ROLE = (By.XPATH, "//div[@class='oxd-select-option']//span[text()='ESS']")
 
 STATUS_DROPDOWN = (By.XPATH, "//label[text()='Status']/following::div[contains(@class, 'oxd-select-text')][1]")
-STATUS_ENABLED = (By.XPATH, "//div[@class='oxd-select-option' and @role='option']//span[text()='Enabled']")
-STATUS_DISABLED = (By.XPATH, "//div[@class='oxd-select-option' and @role='option']//span[text()='Disabled']")
+STATUS_ENABLED = (By.XPATH, "//div[@class='oxd-select-option']//span[text()='Enabled']")
+STATUS_DISABLED = (By.XPATH, "//div[@class='oxd-select-option']//span[text()='Disabled']")
 
 USERNAME_INPUT = (By.XPATH, "//label[text()='Username']/following::input[1]")
 EMPLOYEE_NAME_INPUT = (By.XPATH, "//label[text()='Employee Name']/following::input[1]")
