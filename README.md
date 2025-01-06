@@ -21,7 +21,7 @@ And same applied to API test to compare users shown on the frontend side with AP
 Also, there are few other shortcuts here and there for simplicity and speed since this project is not for real world usage.
 Currently only thing remaining is SQL part. Because it slightly not clear what kind of tables I have to use, there is nothing in orangecrm I could find, or even what database(e.g. MySGL, PostgreSQL). So for now I skipped the implementation of sql client and test to verify user record deletion from the DB. Could be added later on, once I have an email reply with clarifications...
 
-## How to set up project and run the code locally(assuming this will be done on Mac).
+## How to set up project and run the code locally(assuming this will be done on Mac):
 **Required preinstalled dependencies:**
 * PyCharm
 * Python3
@@ -47,7 +47,7 @@ Open terminal in PyCharm and run command:
 ```
 pytest -sv tests/test_create_delete_users.py
 ```
-Additional command may be required to run in terminal(Mac/Linux):
+Additional command may be required to run in terminal(Mac/Linux) to activate an environment:
 ```
 source venv/bin/activate
 ```
