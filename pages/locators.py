@@ -29,7 +29,7 @@ STATUS_DISABLED = (By.XPATH, "//div[@class='oxd-select-option']//span[text()='Di
 
 USERNAME_INPUT = (By.XPATH, "//label[text()='Username']/following::input[1]")
 EMPLOYEE_NAME_INPUT = (By.XPATH, "//label[text()='Employee Name']/following::input[1]")
-EMPLOYEE_NAME_SEARCH = (By.XPATH, "//div[@role='listbox']//div[@role='option']//span[text()='joker john selvam']")
+EMPLOYEE_NAME_SEARCH = (By.XPATH, "//div[@role='listbox']//div[@role='option']//span[text()='John  Doe']")
 
 PASSWORD_INPUT = (By.XPATH, "//label[text()='Password']/following::input[@type='password'][1]")
 PASSWORD_CONFIRM_INPUT = (By.XPATH, "//label[text()='Confirm Password']/following::input[@type='password'][1]")

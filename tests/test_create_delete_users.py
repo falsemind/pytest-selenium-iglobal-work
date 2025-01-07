@@ -1,6 +1,7 @@
 import pytest
 from pages.login_page import LoginPage
 from pages.user_management_page import UserManagementPage
+from utils.sql_client import create_connection, execute_sql_query
 from random import randint
 import requests
 
@@ -47,6 +48,15 @@ class TestCreateDeleteUsers:
     def test_delete_ess_user(self, browser_driver):
         manage_page = UserManagementPage(browser_driver)
         manage_page.delete_user(user_name=self.test_user2)
+
+    @pytest.mark.xfail(reason="Failing test, implemented on assumptions for imaginary Database")
+    @pytest.mark.run(order=7)
+    def test_user_deleted_in_db(self, db_creds):
+        connect = create_connection(db_creds["host_name"], db_creds["user_name"], db_creds["user_password"])
+        select_query = f"SELECT * FROM users WHERE userName = {self.test_user2}"
+
+        result = execute_sql_query(connect, select_query)
+        assert result is None, f"{self.test_user2} record not deleted from DB"
 
     @pytest.mark.xfail(reason="Failing test, implemented on assumptions due to no access to paid license")
     @pytest.mark.run(order=7)

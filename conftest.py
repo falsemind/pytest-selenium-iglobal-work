@@ -1,9 +1,6 @@
 from selenium import webdriver
 import pytest
 import requests
-import json
-
-from socks import method
 
 
 @pytest.fixture(scope="class")
@@ -45,3 +42,12 @@ def orange_crm_auth_headers():
                 "Authorization": f"Bearer access_token",
                 "Content-Type": "application/json"
             }
+
+@pytest.fixture(scope="function")
+def db_creds():
+    # fake credentials fixture just for demonstration
+    return {
+        "host_name": "127.0.0.1",
+        "user_name": "admin",
+        "user_password": "password1"
+    }

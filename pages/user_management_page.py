@@ -15,7 +15,7 @@ class UserManagementPage(BasePage):
         self.wait_for_element(STATUS_DROPDOWN).click()
         self.wait_for_element_visibility(user_status).click()
         # enter user and employee names
-        self.find_element(EMPLOYEE_NAME_INPUT).send_keys("joker john selvam") # hardcoded existing name for the sake of simplicity
+        self.find_element(EMPLOYEE_NAME_INPUT).send_keys("John  Doe") # hardcoded existing name for the sake of simplicity
         self.wait_for_element_visibility(EMPLOYEE_NAME_SEARCH).click()
         self.find_element(USERNAME_INPUT).send_keys(user_name)
         # enter password
