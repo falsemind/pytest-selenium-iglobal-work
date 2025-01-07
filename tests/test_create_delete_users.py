@@ -59,7 +59,7 @@ class TestCreateDeleteUsers:
         assert result is None, f"{self.test_user2} record not deleted from DB"
 
     @pytest.mark.xfail(reason="Failing test, implemented on assumptions due to no access to paid license")
-    @pytest.mark.run(order=7)
+    @pytest.mark.run(order=8)
     def test_verify_frontend_users_with_api(self, orange_crm_auth_headers):
         url = "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users"
         params = {
